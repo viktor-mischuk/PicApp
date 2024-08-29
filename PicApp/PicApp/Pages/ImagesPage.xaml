@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PicApp.Pages.ImagesPage">
+
+    <StackLayout>
+        <ListView x:Name="deviceList" 
+                  ItemsSource="{Binding UserImages}"
+                  ItemTapped="DeviceList_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell
+                        ImageSource="{Binding Image.Source}"
+                        Text="{Binding FileName}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <StackLayout Orientation="Horizontal" >
+            <Button Text="Открыть" Clicked="OpenImage_Button_Clicked"/>
+            <Button Text="Удалить" Clicked="DeleteImage_Button_Clicked"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

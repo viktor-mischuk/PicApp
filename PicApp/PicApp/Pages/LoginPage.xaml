@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PicApp.Pages.LoginPage">
+    
+    <StackLayout x:Name="stackLayout"
+                 VerticalOptions="Center"
+                 HorizontalOptions="Center">
+
+        <Entry x:Name ="PinCodeEntry"
+               MaxLength="4"
+               Keyboard="Numeric"
+               FontSize="Title" VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               />
+
+        <Button x:Name="loginButton" 
+                Text="ОК"
+                Clicked="loginButton_Clicked"/>
+
+    </StackLayout>
+</ContentPage>
